@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: clamp(4px, 0.5vw, 10px);
+  }
+
+  img {
+    width: clamp(16px, 1.5vw, 24px); /* scales for mobile → desktop */
+  }
+}
+
+.skillList {
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  flex-wrap: wrap;
+  row-gap: clamp(20px, 3vw, 50px);
+  max-width: 26ch;
+  gap: clamp(10px, 2vw, 30px);
+}
+
+.skillList p {
+  font-size: clamp(14px, 2vw, 20px);
+}
+
+hr {
+  width: clamp(80px, 10vw, 300px);
+  height: 1px;
+  border: none;
+  background-color: var(--text-color);
+  margin: clamp(20px, 3vw, 40px) auto;
+}
+
+/* ================================
+   DESKTOP / LARGE SCREENS
+================================== */
+@media (min-width: 800px) {
+  .skillList {
+    max-width: fit-content;
+    gap: clamp(20px, 3vw, 40px);
+  }
+
+  skillList p {
+    font-size: clamp(18px, 2vw, 22px);
+  }
+}

@@ -1,0 +1,11 @@
+.container {
+  text-align: center;
+  padding: clamp(10px, 2vw, 30px);
+
+  p {
+    font-size: clamp(14px, 1.5vw, 18px); /* scales mobile → desktop */
+    color: var(--footer-text-color);
+    margin: 0;
+    line-height: 1.5;
+  }
+}

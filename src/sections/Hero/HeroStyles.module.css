@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  height: 100dvh;
+  min-height: 500px;
+
+  .hero {
+    max-width: clamp(180px, 25vw, 400px);
+    width: 100%;
+  }
+
+  span {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+
+    a {
+      margin: 0;
+
+      img {
+        width: clamp(25px, 2.5vw, 35px);
+      }
+    }
+  }
+
+  a {
+    width: fit-content;
+    align-self: center;
+  }
+
+  button {
+    background-color: var(--btn-color);
+    color: var(--btn-text-color);
+    border: none;
+    border-radius: 20px;
+    width: clamp(120px, 12vw, 150px);
+    height: clamp(45px, 6vh, 55px);
+    font-size: clamp(18px, 1.8vw, 22px);
+    font-weight: bold;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+  }
+
+  button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.colorModeContainer {
+  position: relative;
+}
+
+.colorMode {
+  position: absolute;
+  right: 0;
+  width: 25px;
+}
+
+.colorMode:hover {
+  cursor: pointer;
+}
+
+.description {
+  max-width: 24ch;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-size: clamp(16px, 2vw, 20px);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ================================
+   RESPONSIVE LAYOUTS
+================================== */
+@media (min-width: 800px) {
+  .container {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .hero {
+      max-width: clamp(300px, 35vw, 400px);
+    }
+  }
+}
